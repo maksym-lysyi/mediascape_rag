@@ -120,7 +120,7 @@ class GenerateAnswer(dspy.Signature):
 
     context = dspy.InputField(desc="may contain relevant facts")
     question = dspy.InputField()
-    answer = dspy.OutputField(desc="often between 300 and 500 words. Refuse to answer questions unrelated to medicine.")
+    answer = dspy.OutputField(desc="often between 300 and 500 words")
 
 
 

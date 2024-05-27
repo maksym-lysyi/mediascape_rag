@@ -10,16 +10,16 @@ apify_api = os.getenv("APIFY_API")
 
 client = ApifyClientAsync(apify_api)
 app = FastAPI()
+
 semaphore = asyncio.Semaphore(4) 
 
 @app.post("/test/")
-def main(question: str):
-
+async def main(question: str):
     urls = get_urls(question=question)
     print("We have URLs")
 
     # results = get_text(urls)  ||  faster method for testing
-    results = asyncio.run(colect_crawled_content(urls, client, semaphore))
+    results = await colect_crawled_content(urls, client, semaphore)
     print("We have context")
 
     llm = init_llm(api_key=groq_key)
