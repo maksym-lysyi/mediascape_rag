@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("LLM Chat based on the information from Mediascape site.")
+st.title("LLM Chat based on the information from Medscape site.")
 
 # Display the initial prompt from the model
 initial_prompt = "How can I help you?"
