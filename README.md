@@ -6,6 +6,7 @@ This demo utilizes the following tools:
 - Google URL search - for finding corresponding URLs
 - Apify content crawler - for parsing text from URLs
 - LangChain - for managing text chunks
+- DSPy - for automatic prompt engineering
 - FaissDB - as the vector database
 - Groq - for Llama3-70B hosting service
 - FastAPI - for the REST API
