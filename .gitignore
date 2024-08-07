@@ -1,4 +1,7 @@
 .env
+venv
 rag_01
 archive
 __pycache__
+log.log
+.dockerignore

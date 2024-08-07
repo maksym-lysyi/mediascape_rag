@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile_fastapi
+    container_name: fastapi_container
+    ports:
+      - "8000:8000"
+    # volumes:
+    #   - ./fastapi:/app
+    # depends_on:
+    #   - streamlit
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile_streamlit
+    container_name: streamlit_container
+    ports:
+      - "8501:8501"
+    # volumes:
+    #   - ./streamlit:/app
